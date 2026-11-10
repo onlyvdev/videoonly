@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "mimosa-finding-ledger-batch/v1",
+  "batchId": "stop-20261109T064252450Z-4700-f851f265a901",
+  "runId": "20261109T064252450Z-4700-f851f265a901",
+  "runStatus": "completed",
+  "coverage": {
+    "status": "complete",
+    "reasons": []
+  },
+  "source": {
+    "component": "zcode-hook",
+    "operationId": "Stop"
+  },
+  "revision": null,
+  "diffHash": "654d3fcf730af99b63ef105c25a304fd344d4a51c00a07a29217ee411c265b9f",
+  "rulesVersion": "unavailable",
+  "sessionHash": "b86cfef4b7b8fbec70b451cf1b24aa51a72be7dc51f2ccf40e074c215b8f991f",
+  "reportRef": ".mimosa/reports/task-review-sess_d6a9e2fa-f29c-46de-9570-a3e2c932f509-20261109T064252450Z-4700-f851f265a901.json",
+  "events": [],
+  "observedFindingIds": [],
+  "verifiedFiles": [
+    {
+      "file": "content/i18n.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "popup/popup.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/content.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/ui.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    }
+  ],
+  "recordedAt": "2026-11-09T06:42:52.717Z"
+}

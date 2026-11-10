@@ -1,0 +1,16 @@
+<!doctype html><meta charset="utf-8"><title>onlyV 失败提示验证</title>
+<h1>通用播放器诊断测试页</h1>
+<p>参数 case=empty / frame / opaque / loading。按 Alt+V 验证网页全屏反馈。</p>
+<script>
+const kind = new URLSearchParams(location.search).get('case') || 'empty';
+if (kind === 'frame' || kind === 'opaque') {
+  const frame = document.createElement('iframe');
+  frame.style.cssText = 'width:640px;height:360px';
+  if (kind === 'opaque') frame.setAttribute('sandbox', '');
+  frame.srcdoc = '<video controls style="width:600px;height:320px"></video>';
+  document.body.append(frame);
+} else if (kind === 'loading') {
+  const video = document.createElement('video'); video.controls = true;
+  document.body.append(video);
+}
+</script>

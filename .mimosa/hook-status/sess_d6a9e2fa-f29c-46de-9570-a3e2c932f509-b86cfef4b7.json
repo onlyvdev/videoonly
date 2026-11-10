@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "mimosa-hook-status/v1",
+  "recordedAt": "2026-11-10T03:08:23.003Z",
+  "sessionId": "sess_d6a9e2fa-f29c-46de-9570-a3e2c932f509",
+  "event": "PostToolUse",
+  "toolName": "Edit",
+  "file": "content/window-player.js",
+  "outcome": "clear",
+  "coverage": "complete",
+  "findingCount": 0,
+  "durationMs": 11,
+  "hostState": "hook_complete",
+  "reportHint": ".mimosa/reports/"
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "mimosa-finding-ledger-batch/v1",
+  "batchId": "stop-20261109T055849304Z-48460-0cb8e3c56029",
+  "runId": "20261109T055849304Z-48460-0cb8e3c56029",
+  "runStatus": "completed",
+  "coverage": {
+    "status": "complete",
+    "reasons": []
+  },
+  "source": {
+    "component": "zcode-hook",
+    "operationId": "Stop"
+  },
+  "revision": null,
+  "diffHash": "904bb4d852a096e6acd577646fd47cfe0f7931a87ac4760ad44d88143ad5e75e",
+  "rulesVersion": "unavailable",
+  "sessionHash": "b86cfef4b7b8fbec70b451cf1b24aa51a72be7dc51f2ccf40e074c215b8f991f",
+  "reportRef": ".mimosa/reports/task-review-sess_d6a9e2fa-f29c-46de-9570-a3e2c932f509-20261109T055849304Z-48460-0cb8e3c56029.json",
+  "events": [],
+  "observedFindingIds": [],
+  "verifiedFiles": [
+    {
+      "file": "content/rules-engine.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/rules/youtube.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/rules/bilibili.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/rules/iqiyi.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/rules/tencent.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/rules/youku.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/rules/mgtv.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/rules/live.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/detect.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/next.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/config.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/content.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "options/options.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    }
+  ],
+  "recordedAt": "2026-11-09T05:58:49.573Z"
+}

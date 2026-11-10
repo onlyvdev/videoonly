@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title data-i18n="pop_title">onlyV</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header class="pop-head">
+  <div class="pop-brand">
+    <img class="brand-logo" src="../assets/logo.png" width="1257" height="443" alt="onlyV">
+  </div>
+</header>
+
+<div class="pop-body">
+  <!-- ============ 播放控制 ============ -->
+  <section class="group">
+    <div class="row">
+      <div class="row-text" style="flex:1;min-width:0">
+        <span class="row-title" data-i18n="opt_autoPurify">网页全屏</span>
+        <div class="row-sub"><kbd>Alt</kbd><span class="kbd-plus">+</span><kbd>V</kbd></div>
+      </div>
+      <label class="switch"><input type="checkbox" id="autoPurify" disabled><span class="knob"></span></label>
+    </div>
+    <div class="row">
+      <div class="row-text" style="flex:1;min-width:0">
+        <span class="row-title" for="windowPlayer" data-i18n="window_open">小窗口播放</span>
+        <div class="row-sub"><kbd>Alt</kbd><span class="kbd-plus">+</span><kbd>P</kbd></div>
+      </div>
+      <label class="switch"><input type="checkbox" id="windowPlayer" disabled data-i18n-title="window_open"><span class="knob"></span></label>
+    </div>
+  </section>
+
+  <aside id="playbackNotice" class="playback-notice" hidden>
+    <div class="notice-head">
+      <strong data-i18n="playback_notice">播放提示</strong>
+      <button id="dismissPlaybackNotice" class="notice-close" type="button" data-i18n-title="dismiss_notice">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+          <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg><span class="sr-only" data-i18n="dismiss_notice">关闭提示</span>
+      </button>
+    </div>
+    <div id="playbackStatus" dir="auto" role="status" aria-live="polite" aria-atomic="true"></div>
+  </aside>
+
+  <!-- ============ 播放设置 ============ -->
+  <section class="group">
+    <div class="row">
+      <span class="row-title" data-i18n="opt_autoNext">自动下一集</span>
+      <label class="switch"><input type="checkbox" id="autoNext" checked><span class="knob"></span></label>
+    </div>
+    <div class="row">
+      <span class="row-title" data-i18n="opt_skipHead">跳过片头</span>
+      <label class="switch"><input type="checkbox" id="skipHead" checked><span class="knob"></span></label>
+    </div>
+    <div class="row">
+      <span class="row-title" data-i18n="opt_skipTail">跳过片尾</span>
+      <label class="switch"><input type="checkbox" id="skipTail" checked><span class="knob"></span></label>
+    </div>
+    <div class="rule-form" id="ruleForm">
+      <div class="form-row">
+        <label>URL</label>
+        <input type="text" id="rulePattern" class="mono" placeholder="/play/myshow">
+      </div>
+      <div class="form-row">
+        <label data-i18n="label_head_to">正片从</label>
+        <div class="time-group">
+          <input type="number" id="headH" min="0" max="24" step="1" inputmode="numeric" placeholder="00" class="ts"><span class="ts-colon">:</span><input type="number" id="headM" min="0" max="60" step="1" inputmode="numeric" placeholder="01" class="ts"><span class="ts-colon">:</span><input type="number" id="headS" min="0" max="60" step="1" inputmode="numeric" placeholder="30" class="ts">
+        </div>
+      </div>
+      <div class="form-row">
+        <label data-i18n="label_tail_to">正片到</label>
+        <div class="time-group">
+          <input type="number" id="tailH" min="0" max="24" step="1" inputmode="numeric" placeholder="00" class="ts"><span class="ts-colon">:</span><input type="number" id="tailM" min="0" max="60" step="1" inputmode="numeric" placeholder="46" class="ts"><span class="ts-colon">:</span><input type="number" id="tailS" min="0" max="60" step="1" inputmode="numeric" placeholder="00" class="ts">
+        </div>
+      </div>
+      <div class="btn-row">
+        <button id="saveRule" class="btn-filled btn-block" data-i18n="btn_save_rule">应用规则</button>
+        <button id="deleteRule" class="btn-danger" data-i18n="btn_delete_rule" hidden>删除</button>
+      </div>
+      <div class="match" id="matchInfo"></div>
+    </div>
+  </section>
+
+  <div class="pop-foot">
+    <button id="openOptions" class="gear" data-i18n-title="btn_settings">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+          stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <a class="pop-site" href="https://onlyv.dev" target="_blank" rel="noopener noreferrer" data-i18n="pop_site">onlyv.dev</a>
+  </div>
+</div>
+
+<script src="../content/common.js"></script>
+<script src="../content/i18n.js"></script>
+<script src="../content/config.js"></script>
+<script src="popup.js"></script>
+<script src="window-player.js"></script>
+</body>
+</html>

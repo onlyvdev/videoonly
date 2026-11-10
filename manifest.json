@@ -1,0 +1,69 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_manifest_name__",
+  "version": "0.1.3",
+  "description": "__MSG_manifest_desc__",
+  "default_locale": "zh_CN",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content/common.js",
+        "content/i18n.js",
+        "content/config.js",
+        "content/rules-engine.js",
+        "content/rules/youtube.js",
+        "content/rules/bilibili.js",
+        "content/rules/iqiyi.js",
+        "content/rules/tencent.js",
+        "content/rules/youku.js",
+        "content/rules/mgtv.js",
+        "content/rules/live.js",
+        "content/detect.js",
+        "content/purify.js",
+        "content/skip.js",
+        "content/next.js",
+        "content/diagnostics.js",
+        "content/ui.js",
+        "content/content.js",
+        "content/window-player.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "onlyV"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/locales/*.json"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background/window-player.js"
+  },
+  "minimum_chrome_version": "102"
+}

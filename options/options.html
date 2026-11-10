@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="pop_title">onlyV</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="settings-brand">
+      <img class="brand-logo" src="../assets/logo.png" width="1257" height="443" alt="onlyV">
+    </div>
+  </div>
+</header>
+
+<main class="content">
+
+  <!-- ============ 语言（入口行） ============ -->
+  <section class="group">
+    <div class="row lang-entry" id="langEntry" role="button" tabindex="0">
+      <div class="row-text"><div class="row-title" data-i18n="grp_language">语言</div></div>
+      <span class="row-value" id="langCurrent"></span>
+      <span class="chevron">›</span>
+    </div>
+  </section>
+
+  <!-- ============ 快捷键 ============ -->
+  <section class="group">
+    <div class="row">
+      <div class="row-text"><div class="row-title" data-i18n="shortcut_toggle">切换影院模式</div></div>
+      <span class="kbd-row" id="shortcutKbd"></span>
+    </div>
+    <div class="row">
+      <div class="row-text"><div class="row-title" data-i18n="shortcut_window">小窗口播放</div></div>
+      <span class="kbd-row" id="windowKbd"></span>
+    </div>
+  </section>
+
+  <!-- ============ 关于 ============ -->
+  <section class="group">
+    <div class="row intro-row">
+      <div class="intro-text">
+        <div class="intro-hook" data-i18n="intro_hook">追剧时，只想安静看完这一集</div>
+        <div class="intro-line" data-i18n="intro_f1">网页全屏 · 按 Alt+V，视频铺满整个窗口，画面更沉浸</div>
+        <div class="intro-line" data-i18n="intro_f2">小窗播放 · 按 Alt+P，边追剧边聊天，剧停在屏幕一角</div>
+        <div class="intro-line" data-i18n="intro_f3">自动下一集 · 一集播完自动接上，不用每集手动点</div>
+        <div class="intro-line" data-i18n="intro_f4">跳过片头片尾 · 每部剧单独记住，正片直接开始</div>
+        <div class="intro-line" data-i18n="intro_f5">简单 · 两个快捷键，像开关灯一样容易</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-text"><div class="row-title">onlyV</div><div class="row-sub" data-i18n="pop_tagline">仅看视频</div></div>
+      <span class="row-value" id="aboutVersion"></span>
+    </div>
+    <a class="row site-link" href="https://onlyv.dev" target="_blank" rel="noopener noreferrer">
+      <div class="row-text"><div class="row-title accent-text">onlyv.dev</div></div>
+      <span class="chevron">›</span>
+    </a>
+  </section>
+
+</main>
+
+<!-- ============ 语言选择页（独立视图） ============ -->
+<div class="lang-view" id="langView" hidden>
+  <header class="nav lang-nav">
+    <div class="nav-inner">
+      <button class="back-btn" id="langBack" aria-label="back">
+        <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
+          <path d="M10 2 2.8 10l7.2 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <span class="nav-title" data-i18n="grp_language">语言</span>
+      <span class="nav-spacer"></span>
+    </div>
+  </header>
+  <div class="content lang-content">
+    <input type="search" id="langSearch" class="lang-search" data-i18n-placeholder="lang_search_ph" placeholder="搜索语言">
+    <section id="langList"></section>
+  </div>
+</div>
+
+<script src="../content/common.js"></script>
+<script src="../content/i18n.js"></script>
+<script src="options.js"></script>
+</body>
+</html>

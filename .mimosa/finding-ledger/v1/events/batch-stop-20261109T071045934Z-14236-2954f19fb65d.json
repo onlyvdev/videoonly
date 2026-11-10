@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "mimosa-finding-ledger-batch/v1",
+  "batchId": "stop-20261109T071045934Z-14236-2954f19fb65d",
+  "runId": "20261109T071045934Z-14236-2954f19fb65d",
+  "runStatus": "inconclusive",
+  "coverage": {
+    "status": "partial",
+    "reasons": [
+      {
+        "code": "candidate_limit_exceeded",
+        "stage": "candidate-select",
+        "target": "content/locales/uk.js",
+        "detail": "12 changed reviewable file(s) were not scanned because the limit is 20",
+        "affectsCompletion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "candidate-select",
+        "target": "content/locales/uk.js",
+        "detail": "candidate_limit_exceeded: 12 changed reviewable file(s) were not scanned because the limit is 20",
+        "affectsCompletion": true
+      }
+    ]
+  },
+  "source": {
+    "component": "zcode-hook",
+    "operationId": "Stop"
+  },
+  "revision": null,
+  "diffHash": "f15e8cd6772e2fd29727a9f7ff3a065a3a3c56b9d9b5128aeee1b4f8b9e6379d",
+  "rulesVersion": "unavailable",
+  "sessionHash": "b86cfef4b7b8fbec70b451cf1b24aa51a72be7dc51f2ccf40e074c215b8f991f",
+  "reportRef": ".mimosa/reports/task-review-sess_d6a9e2fa-f29c-46de-9570-a3e2c932f509-20261109T071045934Z-14236-2954f19fb65d.json",
+  "events": [],
+  "observedFindingIds": [],
+  "verifiedFiles": [
+    {
+      "file": "content/i18n.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "options/options.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/zh_TW.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/ja.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/ko.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/es.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/pt.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/fr.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/de.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/it.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/ru.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/ar.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/hi.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/th.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/vi.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/id.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/tr.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/pl.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/nl.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "content/locales/sv.js",
+      "direct": "complete",
+      "projectContext": "partial"
+    }
+  ],
+  "recordedAt": "2026-11-09T07:10:46.204Z"
+}
