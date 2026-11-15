@@ -8,7 +8,7 @@
 - **跳过片头片尾** · 每部剧单独记住，正片直接开始
 - **简单** · 两个快捷键，像开关灯一样容易
 
-兼容各大视频网站（通用逻辑自动适配，主流站点内置精确支持）。多语言界面（32 种语言，跟随浏览器语言）。
+兼容各种视频网站（通用逻辑自动适配）。多语言界面（32 种语言，跟随浏览器语言）。
 
 English: **When you binge a show, you just want to watch the show.** Web fullscreen (Alt+V) · Mini window (Alt+P) · Auto next episode · Skip intro & outro, remembered per show.
 
